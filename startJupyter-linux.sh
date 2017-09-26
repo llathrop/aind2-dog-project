@@ -1,5 +1,7 @@
 #!/bin/sh
 
-source activate aind2
-jupyter notebook --ip=0.0.0.0 --no-browser
+
+source activate aind-dog
+KRAS_BACKEND=tensorflow python -c "from keras import backend"
+jupyter notebook --ip=0.0.0.0 --no-browser&
 
